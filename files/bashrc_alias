@@ -1,0 +1,5 @@
+alias g='git'
+alias gacim='git add -A && git commit -m'
+alias gcim='git commit -m'
+alias dc='docker-compose'
+alias dcrun='docker-compose run --rm'
