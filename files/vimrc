@@ -16,6 +16,7 @@ endif
 call plug#begin('~/.vim/plugged')
 
 Plug 'https://github.com/airblade/vim-gitgutter.git'
+Plug 'dense-analysis/ale'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-fugitive'
 Plug 'terryma/vim-multiple-cursors'
@@ -470,6 +471,27 @@ set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 "" Resume latest coc list
 "nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 
+" highlight last inserted text
+nnoremap gV `[v`]
+
+noremap <Leader>s :update<CR>
+
+vmap "y "*y
+nmap "y "*y
+nmap "Y "*Y
+nmap "p "*p
+nmap "P "*P
+
 vmap <leader>y :w! /tmp/.vim/.vbuf<CR>
 nmap <leader>y :.w! /tmp/.vim/.vbuf<CR>
 nmap <leader>p :r /tmp/.vim/.vbuf<CR>
+
+let g:ale_disable_lsp = 1
+
+let g:ale_sign_column_always = 1
+let g:ale_linters_explicit = 1
+let g:ale_sign_highlight_linenrs = 1
+let g:ale_linters = {
+\   'slim': ['slimlint'],
+\   'ruby': ['rubocop', 'brakeman', 'reek'],
+\}
