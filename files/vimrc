@@ -496,3 +496,4 @@ let g:ale_linters = {
 \   'ruby': ['ruby', 'rubocop', 'brakeman', 'reek'],
 \   'javascript': ['eslint', 'stylelint'],
 \}
+let g:ale_fixers = {'javascript': ['prettier', 'eslint']}
