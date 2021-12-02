@@ -2,6 +2,13 @@ alias g='git'
 alias gacim='git add -A && git commit -m'
 alias gcim='git commit -m'
 alias dc='docker-compose'
-alias dcrun='docker-compose run --rm'
+alias dcr='docker-compose run --rm'
+alias dc='docker-compose'
+alias gdnl='git diff --name-only HEAD HEAD~1'
+alias gdn='git diff --name-only'
+
+alias ll='ls -laF'
+alias la='ls -A'
+alias l='ls -CF'
 
 export BABEL_ENV=development
