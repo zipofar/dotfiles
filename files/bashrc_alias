@@ -3,12 +3,16 @@ alias gacim='git add -A && git commit -m'
 alias gcim='git commit -m'
 alias dc='docker-compose'
 alias dcr='docker-compose run --rm'
-alias dc='docker-compose'
 alias gdnl='git diff --name-only HEAD HEAD~1'
 alias gdn='git diff --name-only'
+alias gco=grep_branch_and_git_checkout
 
 alias ll='ls -laF'
 alias la='ls -A'
 alias l='ls -CF'
+
+grep_branch_and_git_checkout() {
+ git branch | grep $1 | xargs git checkout
+}
 
 export BABEL_ENV=development
