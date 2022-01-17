@@ -3,6 +3,7 @@ alias gacim='git add -A && git commit -m'
 alias gcim='git commit -m'
 alias dc='docker-compose'
 alias dcr='docker-compose run --rm'
+alias gd='git diff'
 alias gdnl='git diff --name-only HEAD HEAD~1'
 alias gdn='git diff --name-only'
 alias gco=grep_branch_and_git_checkout
