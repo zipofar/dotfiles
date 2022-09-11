@@ -245,6 +245,7 @@ map <leader>vr :source $MYVIMRC<CR>
 
 nmap <C-m> :NERDTreeFind<CR>
 nmap <silent> <leader><leader> :NERDTreeToggle<CR>
+nmap <CR> :NERDTreeFind<CR>
 
 nnoremap <leader>b :Buffers<CR>
 
@@ -504,3 +505,6 @@ let g:ale_linters = {
 \   'javascript': ['eslint', 'stylelint'],
 \}
 let g:ale_fixers = {'javascript': ['prettier', 'eslint']}
+
+inoremap <silent><expr> <C-j> coc#pum#visible() ? coc#pum#next(1) : "\<C-j>"
+inoremap <silent><expr> <C-k> coc#pum#visible() ? coc#pum#prev(1) : "\<C-k>"
