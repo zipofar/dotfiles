@@ -476,11 +476,18 @@ nnoremap gV `[v`]
 
 noremap <Leader>s :update<CR>
 
-vmap "y "*y
-nmap "y "*y
-nmap "Y "*Y
-nmap "p "*p
-nmap "P "*P
+" vmap "y "*y
+" nmap "y "*y
+" nmap "Y "*Y
+" nmap "p "*p
+" nmap "P "*P
+
+" For ububntu
+vmap "y "+y
+nmap "y "+y
+nmap "Y "+Y
+nmap "p "+p
+nmap "P "+P
 
 vmap <leader>y :w! /tmp/.vim/.vbuf<CR>
 nmap <leader>y :.w! /tmp/.vim/.vbuf<CR>
