@@ -19,4 +19,5 @@
   name = Zipofar
   email = zipofar@gmail.com
 [core]
-  excludesfile = /home/ingprog/.gitexcludes
+	excludesfile = .gitexcludes
+	editor = nvim
