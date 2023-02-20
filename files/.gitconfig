@@ -19,5 +19,8 @@
   name = Zipofar
   email = zipofar@gmail.com
 [core]
-	excludesfile = .gitexcludes
 	editor = nvim
+	excludesfile = .gitexcludes
+        excludesfile = ~/.gitexcludes
+[push]
+    default = current

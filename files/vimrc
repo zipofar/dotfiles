@@ -112,6 +112,11 @@ Plug 'kovisoft/slimv', { 'for': ['clojure', 'scheme', 'racket'] }
 
 Plug 'chrisbra/csv.vim', { 'for': 'csv' }
 Plug 'ekalinin/Dockerfile.vim', { 'for': 'Dockerfile' }
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+Plug 'leafgarland/typescript-vim'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'ojroques/vim-oscyank', {'branch': 'main'}
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 let g:coc_global_extensions = [
@@ -126,12 +131,8 @@ let g:coc_global_extensions = [
       \ 'coc-css',
       \ 'coc-stylelint',
       \ 'coc-vimlsp',
-      \ 'coc-go',
-      \ 'coc-elixir',
       \ 'coc-json',
       \ 'coc-eslint',
-      \ 'coc-python',
-      \ 'coc-java',
       \ 'coc-jest',
       \ 'coc-solargraph',
       \ 'coc-yaml',
@@ -140,6 +141,10 @@ let g:coc_global_extensions = [
       \ 'coc-docker',
       \ 'coc-diagnostic',
       \]
+      " \ 'coc-go',
+      " \ 'coc-elixir',
+      " \ 'coc-python',
+      " \ 'coc-java',
 
 call plug#end()
 
@@ -508,3 +513,13 @@ let g:ale_fixers = {'javascript': ['prettier', 'eslint']}
 
 inoremap <silent><expr> <C-j> coc#pum#visible() ? coc#pum#next(1) : "\<C-j>"
 inoremap <silent><expr> <C-k> coc#pum#visible() ? coc#pum#prev(1) : "\<C-k>"
+
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsEditSplit="vertical"
+
+" When you want to copy to clipboard accross ssh and tmux
+" $ tmux show -s set-clipboard >> should be -> external
+" https://github.com/tmux/tmux/wiki/Clipboard
+vnoremap "+y :OSCYank<CR>

@@ -34,3 +34,10 @@ deps-npm:
 	npm install -g prettier eslint babel-eslint
 	npx install-peerdeps -g eslint-config-airbnb
 	npm install -g stylelint stylelint-config-recommended stylelint-config-standard
+
+install-configs:
+	ln -s $(PWD)/files/.gitconfig ~/.gitconfig | true
+	ln -s $(PWD)/files/.gitexcludes ~/.gitexcludes | true
+	ln -s $(PWD)/files/.tmux.conf ~/.tmux.conf | true
+	mkdir -p ~/.config/nvim/UltiSnips
+	ln -s $(PWD)/files/vim_snippets/ruby.snippets ~/.config/nvim/UltiSnips/ruby.snippets | true

@@ -1,0 +1,15 @@
+snippet flog "Log to file" b
+File.open(Rails.root.join('tmp/debug_log.txt'), 'w') do |f|
+  f.puts JSON.pretty_generate($1.as_json)
+end
+endsnippet
+
+snippet clog "Log to console" b
+Rails.logger.info('==============================')
+Rails.logger.info('==============================')
+Rails.logger.info('==============================')
+Rails.logger.info(JSON.pretty_generate($1.as_json))
+Rails.logger.info('==============================')
+Rails.logger.info('==============================')
+Rails.logger.info('==============================')
+endsnippet

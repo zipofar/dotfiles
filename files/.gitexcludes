@@ -1,2 +1,8 @@
-**/.vscode
 *.swp
+**/.vscode
+**/public/attachments
+*.swp
+*.DS_Store
+*.tool-versions
+*.env
+
